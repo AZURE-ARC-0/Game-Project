@@ -1,0 +1,77 @@
+Minecraft Modding Questions
+
+Date: February 21, 2025
+
+General Modding Questions
+
+What is the best modding framework for creating custom mobs and AI in Minecraft (Forge, Fabric, or NeoForge)?
+
+How can I optimize performance when adding complex AI behaviors to custom entities?
+
+What tools are best for debugging Minecraft mods?
+
+How do you structure a large mod project to keep it maintainable and modular?
+
+What are some best practices for balancing gameplay mechanics in a custom mod?
+
+Modding for AI and NPCs
+
+How can I create a custom pathfinding system that differs from Minecraft’s vanilla AI?
+
+What’s the best approach to implementing memory and learning behaviors for NPCs?
+
+How can I enable NPCs to interact meaningfully with their environment (e.g., farming, building, resource gathering)?
+
+How do I optimize AI decision trees to prevent excessive CPU load in large NPC settlements?
+
+Are there existing AI libraries that integrate well with Minecraft modding frameworks?
+
+Custom Blocks, Items, and Crafting
+
+How do you create a custom block with unique interactions (e.g., machines, functional furniture)?
+
+What’s the best way to implement a custom crafting system that goes beyond vanilla mechanics?
+
+How can I make custom items interact with vanilla blocks in intuitive ways?
+
+What are the performance considerations when adding a large number of custom blocks and items?
+
+How do I implement dynamic item durability and progression mechanics?
+
+World Generation and Structures
+
+How do you generate custom biomes without causing performance issues?
+
+What’s the best approach to procedural structure generation within world chunks?
+
+How can I create a new dimension with unique physics and mechanics?
+
+How do I make custom ore generation feel balanced and natural?
+
+What techniques work best for adding large, interactive structures to the world?
+
+Multiplayer and Compatibility
+
+How do I ensure my mod works smoothly in multiplayer and on dedicated servers?
+
+What are some common pitfalls when synchronizing data between the client and server?
+
+How do I handle cross-mod compatibility without causing conflicts?
+
+What’s the best way to implement mod-configurable settings that players can tweak?
+
+How do I secure custom mod features to prevent exploits in multiplayer?
+
+Advanced Features and Future Plans
+
+How do I integrate AI-powered features such as machine learning into a Minecraft mod?
+
+What’s the feasibility of implementing a voxel-based deformable terrain system?
+
+How do I create a mod that allows players to program NPC behaviors using a scripting language?
+
+How do I add real-time physics simulations beyond Minecraft’s default engine?
+
+What are the current limitations of Minecraft’s modding API, and how can they be worked around?
+
+These questions cover a broad range of topics in Minecraft modding, from beginner concerns to advanced AI and world-generation challenges. If any of these need deeper exploration, let me know!

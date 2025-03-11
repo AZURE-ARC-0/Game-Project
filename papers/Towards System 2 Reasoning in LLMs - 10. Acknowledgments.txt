@@ -1,0 +1,444 @@
+10. Acknowledgments
+We would like to thank Aviral Kumar, Benjamin Eysenbach, Nathan Lambert, Rishabh Agarwal, Sasha
+Rush and Noah Goodman for the fruitful discussions and feedback on this report.
+52
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+References
+Amro Abbas, Kushal Tirumala, Dániel Simig, Surya Ganguli, and Ari S. Morcos. Semdedup: Data-
+efficient learning at web-scale through semantic deduplication, 2023. URL https://arxiv.org/
+abs/2303.09540.
+Arash Ahmadian, Chris Cremer, Matthias Gallé, Marzieh Fadaee, Julia Kreutzer, Ahmet Üstün, and
+Sara Hooker. Back to basics: Revisiting reinforce style optimization for learning from human
+feedback in llms. arXiv preprint arXiv:2402.14740, 2024.
+Alon Albalak, Yanai Elazar, Sang Michael Xie, Shayne Longpre, Nathan Lambert, Xinyi Wang, Niklas
+Muennighoff, Bairu Hou, Liangming Pan, Haewon Jeong, Colin Raffel, Shiyu Chang, Tatsunori
+Hashimoto, and William Yang Wang. A survey on data selection for language models, 2024. URL
+https://arxiv.org/abs/2402.16827.
+Alex Andonian, Quentin Anthony, Stella Biderman, Sid Black, Preetham Gali, Leo Gao, Eric Hallahan,
+Josh Levy-Kramer, Connor Leahy, Lucas Nestler, Kip Parker, Michael Pieler, Jason Phang, Shivanshu
+Purohit, Hailey Schoelkopf, Dashiell Stander, Tri Songz, Curt Tigges, Benjamin Thérien, Phil Wang,
+and Samuel Weinbach. GPT-NeoX: Large Scale Autoregressive Language Modeling in PyTorch,
+2023. URL https://www.github.com/eleutherai/gpt-neox.
+Anonymous. Improving the efficiency of test-time search in LLMs with backtracking. In Submitted
+to The Thirteenth International Conference on Learning Representations, 2024. URL https://
+openreview.net/forum?id=hJ2BCYGvFg. under review.
+Jacob Beck, Risto Vuorio, Evan Zheran Liu, Zheng Xiong, Luisa Zintgraf, Chelsea Finn, and Shimon
+Whiteson. A survey of meta-reinforcement learning, 2024. URL https://arxiv.org/abs/2301.
+08028.
+Bradley Brown, Jordan Juravsky, Ryan Ehrlich, Ronald Clark, Quoc V Le, Christopher Ré, and Azalia
+Mirhoseini. Large language monkeys: Scaling inference compute with repeated sampling. arXiv
+preprint arXiv:2407.21787, 2024.
+Wenhu Chen, Xueguang Ma, Xinyi Wang, and William W Cohen. Program of thoughts prompt-
+ing: Disentangling computation from reasoning for numerical reasoning tasks. arXiv preprint
+arXiv:2211.12588, 2022.
+Xingyu Chen, Jiahao Xu, Tian Liang, Zhiwei He, Jianhui Pang, Dian Yu, Linfeng Song, Qiuzhi Liu,
+Mengfei Zhou, Zhuosheng Zhang, Rui Wang, Zhaopeng Tu, Haitao Mi, and Dong Yu. Do not think
+that much for 2+3=? on the overthinking of o1-like llms, 2024. URL https://arxiv.org/abs/
+2412.21187.
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias
+Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John Schulman.
+Training verifiers to solve math word problems, 2021. URL https://arxiv.org/abs/2110.
+14168.
+DeepSeek. Deepseek-r1-lite-preview is now live: unleashing supercharged reasoning power!, 11 2024.
+URL https://x.com/deepseek_ai/status/1859200141355536422. Posted on X (formerly
+Twitter).
+Mostafa Dehghani, Stephan Gouws, Oriol Vinyals, Jakob Uszkoreit, and Łukasz Kaiser. Universal
+transformers, 2019. URL https://arxiv.org/abs/1807.03819.
+53
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Yan Duan, John Schulman, Xi Chen, Peter L. Bartlett, Ilya Sutskever, and Pieter Abbeel. Rl2: Fast
+reinforcement learning via slow reinforcement learning, 2016. URL https://arxiv.org/abs/
+1611.02779.
+Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha
+Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, Anirudh Goyal, Anthony Hartshorn,
+Aobo Yang, Archi Mitra, Archie Sravankumar, Artem Korenev, Arthur Hinsvark, Arun Rao, Aston
+Zhang, Aurelien Rodriguez, Austen Gregerson, Ava Spataru, Baptiste Roziere, Bethany Biron, Binh
+Tang, Bobbie Chern, Charlotte Caucheteux, Chaya Nayak, Chloe Bi, Chris Marra, Chris McConnell,
+Christian Keller, Christophe Touret, Chunyang Wu, Corinne Wong, Cristian Canton Ferrer, Cyrus
+Nikolaidis, Damien Allonsius, Daniel Song, Danielle Pintz, Danny Livshits, David Esiobu, Dhruv
+Choudhary, Dhruv Mahajan, Diego Garcia-Olano, Diego Perino, Dieuwke Hupkes, Egor Lakomkin,
+Ehab AlBadawy, Elina Lobanova, Emily Dinan, Eric Michael Smith, Filip Radenovic, Frank Zhang,
+Gabriel Synnaeve, Gabrielle Lee, Georgia Lewis Anderson, Graeme Nail, Gregoire Mialon, Guan
+Pang, Guillem Cucurell, Hailey Nguyen, Hannah Korevaar, Hu Xu, Hugo Touvron, Iliyan Zarov,
+Imanol Arrieta Ibarra, Isabel Kloumann, Ishan Misra, Ivan Evtimov, Jade Copet, Jaewon Lee, Jan
+Geffert, Jana Vranes, Jason Park, Jay Mahadeokar, Jeet Shah, Jelmer van der Linde, Jennifer
+Billock, Jenny Hong, Jenya Lee, Jeremy Fu, Jianfeng Chi, Jianyu Huang, Jiawen Liu, Jie Wang,
+Jiecao Yu, Joanna Bitton, Joe Spisak, Jongsoo Park, Joseph Rocca, Joshua Johnstun, Joshua Saxe,
+Junteng Jia, Kalyan Vasuden Alwala, Kartikeya Upasani, Kate Plawiak, Ke Li, Kenneth Heafield,
+Kevin Stone, Khalid El-Arini, Krithika Iyer, Kshitiz Malik, Kuenley Chiu, Kunal Bhalla, Lauren
+Rantala-Yeary, Laurens van der Maaten, Lawrence Chen, Liang Tan, Liz Jenkins, Louis Martin,
+Lovish Madaan, Lubo Malo, Lukas Blecher, Lukas Landzaat, Luke de Oliveira, Madeline Muzzi,
+Mahesh Pasupuleti, Mannat Singh, Manohar Paluri, Marcin Kardas, Mathew Oldham, Mathieu
+Rita, Maya Pavlova, Melanie Kambadur, Mike Lewis, Min Si, Mitesh Kumar Singh, Mona Hassan,
+Naman Goyal, Narjes Torabi, Nikolay Bashlykov, Nikolay Bogoychev, Niladri Chatterji, Olivier
+Duchenne, Onur Çelebi, Patrick Alrassy, Pengchuan Zhang, Pengwei Li, Petar Vasic, Peter Weng,
+Prajjwal Bhargava, Pratik Dubal, Praveen Krishnan, Punit Singh Koura, Puxin Xu, Qing He, Qingxiao
+Dong, Ragavan Srinivasan, Raj Ganapathy, Ramon Calderer, Ricardo Silveira Cabral, Robert Stojnic,
+Roberta Raileanu, Rohit Girdhar, Rohit Patel, Romain Sauvestre, Ronnie Polidoro, Roshan Sumbaly,
+Ross Taylor, Ruan Silva, Rui Hou, Rui Wang, Saghar Hosseini, Sahana Chennabasappa, Sanjay Singh,
+Sean Bell, Seohyun Sonia Kim, Sergey Edunov, Shaoliang Nie, Sharan Narang, Sharath Raparthy,
+Sheng Shen, Shengye Wan, Shruti Bhosale, Shun Zhang, Simon Vandenhende, Soumya Batra,
+Spencer Whitman, Sten Sootla, Stephane Collot, Suchin Gururangan, Sydney Borodinsky, Tamar
+Herman, Tara Fowler, Tarek Sheasha, Thomas Georgiou, Thomas Scialom, Tobias Speckbacher,
+Todor Mihaylov, Tong Xiao, Ujjwal Karn, Vedanuj Goswami, Vibhor Gupta, Vignesh Ramanathan,
+Viktor Kerkez, Vincent Gonguet, Virginie Do, Vish Vogeti, Vladan Petrovic, Weiwei Chu, Wenhan
+Xiong, Wenyin Fu, Whitney Meers, Xavier Martinet, Xiaodong Wang, Xiaoqing Ellen Tan, Xinfeng
+Xie, Xuchao Jia, Xuewei Wang, Yaelle Goldschlag, Yashesh Gaur, Yasmine Babaei, Yi Wen, Yiwen
+Song, Yuchen Zhang, Yue Li, Yuning Mao, Zacharie Delpierre Coudert, Zheng Yan, Zhengxing Chen,
+Zoe Papakipos, Aaditya Singh, Aaron Grattafiori, Abha Jain, Adam Kelsey, Adam Shajnfeld, Adithya
+Gangidi, Adolfo Victoria, Ahuva Goldstand, Ajay Menon, Ajay Sharma, Alex Boesenberg, Alex
+Vaughan, Alexei Baevski, Allie Feinstein, Amanda Kallet, Amit Sangani, Anam Yunus, Andrei Lupu,
+Andres Alvarado, Andrew Caples, Andrew Gu, Andrew Ho, Andrew Poulton, Andrew Ryan, Ankit
+Ramchandani, Annie Franco, Aparajita Saraf, Arkabandhu Chowdhury, Ashley Gabriel, Ashwin
+Bharambe, Assaf Eisenman, Azadeh Yazdan, Beau James, Ben Maurer, Benjamin Leonhardi, Bernie
+Huang, Beth Loyd, Beto De Paola, Bhargavi Paranjape, Bing Liu, Bo Wu, Boyu Ni, Braden Hancock,
+Bram Wasti, Brandon Spence, Brani Stojkovic, Brian Gamido, Britt Montalvo, Carl Parker, Carly
+Burton, Catalina Mejia, Changhan Wang, Changkyu Kim, Chao Zhou, Chester Hu, Ching-Hsiang
+Chu, Chris Cai, Chris Tindal, Christoph Feichtenhofer, Damon Civin, Dana Beaty, Daniel Kreymer,
+54
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Daniel Li, Danny Wyatt, David Adkins, David Xu, Davide Testuggine, Delia David, Devi Parikh, Diana
+Liskovich, Didem Foss, Dingkang Wang, Duc Le, Dustin Holland, Edward Dowling, Eissa Jamil,
+Elaine Montgomery, Eleonora Presani, Emily Hahn, Emily Wood, Erik Brinkman, Esteban Arcaute,
+Evan Dunbar, Evan Smothers, Fei Sun, Felix Kreuk, Feng Tian, Firat Ozgenel, Francesco Caggioni,
+Francisco Guzmán, Frank Kanayet, Frank Seide, Gabriela Medina Florez, Gabriella Schwarz, Gada
+Badeer, Georgia Swee, Gil Halpern, Govind Thattai, Grant Herman, Grigory Sizov, Guangyi, Zhang,
+Guna Lakshminarayanan, Hamid Shojanazeri, Han Zou, Hannah Wang, Hanwen Zha, Haroun
+Habeeb, Harrison Rudolph, Helen Suk, Henry Aspegren, Hunter Goldman, Ibrahim Damlaj, Igor
+Molybog, Igor Tufanov, Irina-Elena Veliche, Itai Gat, Jake Weissman, James Geboski, James Kohli,
+Japhet Asher, Jean-Baptiste Gaya, Jeff Marcus, Jeff Tang, Jennifer Chan, Jenny Zhen, Jeremy
+Reizenstein, Jeremy Teboul, Jessica Zhong, Jian Jin, Jingyi Yang, Joe Cummings, Jon Carvill, Jon
+Shepard, Jonathan McPhie, Jonathan Torres, Josh Ginsburg, Junjie Wang, Kai Wu, Kam Hou U,
+Karan Saxena, Karthik Prasad, Kartikay Khandelwal, Katayoun Zand, Kathy Matosich, Kaushik
+Veeraraghavan, Kelly Michelena, Keqian Li, Kun Huang, Kunal Chawla, Kushal Lakhotia, Kyle
+Huang, Lailin Chen, Lakshya Garg, Lavender A, Leandro Silva, Lee Bell, Lei Zhang, Liangpeng
+Guo, Licheng Yu, Liron Moshkovich, Luca Wehrstedt, Madian Khabsa, Manav Avalani, Manish
+Bhatt, Maria Tsimpoukelli, Martynas Mankus, Matan Hasson, Matthew Lennie, Matthias Reso,
+Maxim Groshev, Maxim Naumov, Maya Lathi, Meghan Keneally, Michael L. Seltzer, Michal Valko,
+Michelle Restrepo, Mihir Patel, Mik Vyatskov, Mikayel Samvelyan, Mike Clark, Mike Macey, Mike
+Wang, Miquel Jubert Hermoso, Mo Metanat, Mohammad Rastegari, Munish Bansal, Nandhini
+Santhanam, Natascha Parks, Natasha White, Navyata Bawa, Nayan Singhal, Nick Egebo, Nicolas
+Usunier, Nikolay Pavlovich Laptev, Ning Dong, Ning Zhang, Norman Cheng, Oleg Chernoguz, Olivia
+Hart, Omkar Salpekar, Ozlem Kalinli, Parkin Kent, Parth Parekh, Paul Saab, Pavan Balaji, Pedro
+Rittner, Philip Bontrager, Pierre Roux, Piotr Dollar, Polina Zvyagina, Prashant Ratanchandani,
+Pritish Yuvraj, Qian Liang, Rachad Alao, Rachel Rodriguez, Rafi Ayub, Raghotham Murthy, Raghu
+Nayani, Rahul Mitra, Raymond Li, Rebekkah Hogan, Robin Battey, Rocky Wang, Rohan Maheswari,
+Russ Howes, Ruty Rinott, Sai Jayesh Bondu, Samyak Datta, Sara Chugh, Sara Hunt, Sargun Dhillon,
+Sasha Sidorov, Satadru Pan, Saurabh Verma, Seiji Yamamoto, Sharadh Ramaswamy, Shaun Lindsay,
+Shaun Lindsay, Sheng Feng, Shenghao Lin, Shengxin Cindy Zha, Shiva Shankar, Shuqiang Zhang,
+Shuqiang Zhang, Sinong Wang, Sneha Agarwal, Soji Sajuyigbe, Soumith Chintala, Stephanie Max,
+Stephen Chen, Steve Kehoe, Steve Satterfield, Sudarshan Govindaprasad, Sumit Gupta, Sungmin
+Cho, Sunny Virk, Suraj Subramanian, Sy Choudhury, Sydney Goldman, Tal Remez, Tamar Glaser,
+Tamara Best, Thilo Kohler, Thomas Robinson, Tianhe Li, Tianjun Zhang, Tim Matthews, Timothy
+Chou, Tzook Shaked, Varun Vontimitta, Victoria Ajayi, Victoria Montanez, Vijai Mohan, Vinay Satish
+Kumar, Vishal Mangla, Vítor Albiero, Vlad Ionescu, Vlad Poenaru, Vlad Tiberiu Mihailescu, Vladimir
+Ivanov, Wei Li, Wenchen Wang, Wenwen Jiang, Wes Bouaziz, Will Constable, Xiaocheng Tang,
+Xiaofang Wang, Xiaojian Wu, Xiaolan Wang, Xide Xia, Xilun Wu, Xinbo Gao, Yanjun Chen, Ye Hu,
+Ye Jia, Ye Qi, Yenda Li, Yilin Zhang, Ying Zhang, Yossi Adi, Youngjin Nam, Yu, Wang, Yuchen Hao,
+Yundi Qian, Yuzi He, Zach Rait, Zachary DeVito, Zef Rosnbrick, Zhaoduo Wen, Zhenyu Yang, and
+Zhiwei Zhao. The llama 3 herd of models, 2024. URL https://arxiv.org/abs/2407.21783.
+Yann Dubois, Xuechen Li, Rohan Taori, Tianyi Zhang, Ishaan Gulrajani, Jimmy Ba, Carlos Guestrin,
+Percy Liang, and Tatsunori B. Hashimoto. Alpacafarm: A simulation framework for methods that
+learn from human feedback, 2024.
+Subhabrata Dutta, Joykirat Singh, Soumen Chakrabarti, and Tanmoy Chakraborty. How to think
+step-by-step: A mechanistic understanding of chain-of-thought reasoning. ArXiv, abs/2402.18312,
+2024. URL https://api.semanticscholar.org/CorpusID:268041831.
+Jeffrey L Elman. Finding structure in time. Cognitive science, 14(2):179–211, 1990.
+55
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Xidong Feng, Ziyu Wan, Muning Wen, Stephen Marcus McAleer, Ying Wen, Weinan Zhang, and Jun
+Wang. Alphazero-like tree-search can guide large language model decoding and training, 2024.
+Kanishk Gandhi, Dorsa Sadigh, and Noah D. Goodman. Strategic reasoning with language models,
+2023. URL https://arxiv.org/abs/2305.19165.
+Kanishk Gandhi, Denise Lee, Gabriel Grand, Muxin Liu, Winson Cheng, Archit Sharma, and Noah D
+Goodman. Stream of search (sos): Learning to search in language. arXiv preprint arXiv:2404.03683,
+2024.
+Bofei Gao, Feifan Song, Zhe Yang, Zefan Cai, Yibo Miao, Qingxiu Dong, Lei Li, Chenghao Ma,
+Liang Chen, Runxin Xu, Zhengyang Tang, Benyou Wang, Daoguang Zan, Shanghaoran Quan,
+Ge Zhang, Lei Sha, Yichang Zhang, Xuancheng Ren, Tianyu Liu, and Baobao Chang. Omni-
+math: A universal olympiad level mathematic benchmark for large language models, 2024. URL
+https://arxiv.org/abs/2410.07985.
+Jonas Gehring, Kunhao Zheng, Jade Copet, Vegard Mella, Taco Cohen, and Gabriel Synnaeve. Rlef:
+Grounding code llms in execution feedback with reinforcement learning, 2024. URL https:
+//arxiv.org/abs/2410.02089.
+Dibya Ghosh, Jad Rahme, Aviral Kumar, Amy Zhang, Ryan P. Adams, and Sergey Levine. Why
+generalization in rl is difficult: Epistemic pomdps and implicit partial observability, 2021. URL
+https://arxiv.org/abs/2107.06277.
+Edouard Grave, Piotr Bojanowski, Prakhar Gupta, Armand Joulin, and Tomas Mikolov. Learning word
+vectors for 157 languages. In Proceedings of the International Conference on Language Resources and
+Evaluation (LREC 2018), 2018.
+Arnav Gudibande, Eric Wallace, Charlie Snell, Xinyang Geng, Hao Liu, Pieter Abbeel, Sergey Levine,
+and Dawn Song. The false promise of imitating proprietary llms, 2023. URL https://arxiv.
+org/abs/2305.15717.
+Shibo Hao, Yi Gu, Haodi Ma, Joshua Jiahua Hong, Zhen Wang, Daisy Zhe Wang, and Zhiting Hu.
+Reasoning with language model is planning with world model, 2023. URL https://arxiv.org/
+abs/2305.14992.
+Alex Havrilla, Yuqing Du, Sharath Chandra Raparthy, Christoforos Nalmpantis, Jane Dwivedi-Yu,
+Maksym Zhuravinskyi, Eric Hambro, Sainbayar Sukhbaatar, and Roberta Raileanu. Teaching large
+language models to reason with reinforcement learning, 2024. URL https://arxiv.org/abs/
+2403.04642.
+Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul Arora, Steven Basart, Eric Tang, Dawn Song,
+and Jacob Steinhardt. Measuring mathematical problem solving with the math dataset, 2021. URL
+https://arxiv.org/abs/2103.03874.
+Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir
+Mohamed, and Alexander Lerchner. B-vae: Learning basic visual concepts with a constrained
+variational framework. In International Conference on Learning Representations (ICLR), 2017. URL
+https://openreview.net/forum?id=Sy2fzU9gl.
+Jan Humplik, Alexandre Galashov, Leonard Hasenclever, Pedro A. Ortega, Yee Whye Teh, and Nicolas
+Heess. Meta reinforcement learning as task inference, 2019. URL https://arxiv.org/abs/
+1905.06424.
+56
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Andy L. Jones. Scaling scaling laws with board games, 2021. URL https://arxiv.org/abs/2104.
+03113.
+Michael I Jordan. Serial order: A parallel distributed processing approach. In Advances in psychology,
+volume 121, pp. 471–495. Elsevier, 1997.
+Armand Joulin, Edouard Grave, Piotr Bojanowski, Matthijs Douze, H’erve J’egou, and Tomas Mikolov.
+Fasttext.zip: Compressing text classification models. arXiv preprint arXiv:1612.03651, 2016a.
+Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov. Bag of tricks for efficient text
+classification. arXiv preprint arXiv:1607.01759, 2016b.
+Amirhossein Kazemnejad, Milad Aghajohari, Eva Portelance, Alessandro Sordoni, Siva Reddy, Aaron
+Courville, and Nicolas Le Roux. Vineppo: Unlocking rl potential for llm reasoning through refined
+credit assignment, 2024. URL https://arxiv.org/abs/2410.01679.
+Diederik P Kingma and Max Welling. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114,
+2013. URL https://arxiv.org/abs/1312.6114.
+Levente Kocsis and Csaba Szepesvári. Bandit based Monte-Carlo planning. In Johannes Fürnkranz,
+Tobias Scheffer, and Myra Spiliopoulou (eds.), Machine Learning: ECML 2006, volume 4212 of
+Lecture Notes in Computer Science, Berlin, Heidelberg, 2006. Springer. doi: 10.1007/11871842_29.
+Jing Yu Koh, Stephen McAleer, Daniel Fried, and Ruslan Salakhutdinov. Tree search for language
+model agents. arXiv preprint arXiv:2407.01476, 2024.
+Aviral Kumar, Vincent Zhuang, Rishabh Agarwal, Yi Su, John D Co-Reyes, Avi Singh, Kate Baumli,
+Shariq Iqbal, Colton Bishop, Rebecca Roelofs, Lei M Zhang, Kay McKinney, Disha Shrivastava,
+Cosmin Paduraru, George Tucker, Doina Precup, Feryal Behbahani, and Aleksandra Faust. Training
+language models to self-correct via reinforcement learning, 2024. URL https://arxiv.org/
+abs/2409.12917.
+Xin Lai, Zhuotao Tian, Yukang Chen, Senqiao Yang, Xiangru Peng, and Jiaya Jia. Step-dpo: Step-wise
+preference optimization for long-chain reasoning of llms, 2024. URL https://arxiv.org/abs/
+2406.18629.
+Lucas Lehnert, Sainbayar Sukhbaatar, DiJia Su, Qinqing Zheng, Paul Mcvay, Michael Rabbat, and
+Yuandong Tian. Beyond a*: Better planning with transformers via search dynamics bootstrapping,
+2024. URL https://arxiv.org/abs/2402.14083.
+Sergey Levine, Aviral Kumar, George Tucker, and Justin Fu. Offline reinforcement learning: Tutorial,
+review, and perspectives on open problems, 2020.
+Jia LI, Edward Beeching, Lewis Tunstall, Ben Lipkin, Roman Soletskyi, Shengyi Costa
+Huang, Kashif Rasul, Longhui Yu, Albert Jiang, Ziju Shen, Zihan Qin, Bin Dong,
+Li Zhou, Yann Fleureau, Guillaume Lample, and Stanislas Polu. Numinamath. [https:
+//huggingface.co/AI-MO/NuminaMath-CoT](https://github.com/project-numina/
+aimo-progress-prize/blob/main/report/numina_dataset.pdf), 2024.
+Zhiyuan Li, Hong Liu, Denny Zhou, and Tengyu Ma. Chain of thought empowers transformers to
+solve inherently serial problems, 2024. URL https://arxiv.org/abs/2402.12875.
+Hunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan
+Leike, John Schulman, Ilya Sutskever, and Karl Cobbe. Let’s verify step by step. arXiv preprint
+arXiv:2305.20050, 2023.
+57
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Anji Liu, Yitao Liang, Ji Liu, Guy Van den Broeck, and Jianshu Chen. On effective parallelization of
+monte carlo tree search, 2020. URL https://arxiv.org/abs/2006.08785.
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon,
+Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank Gupta, Bodhisattwa Prasad Majumder,
+Katherine Hermann, Sean Welleck, Amir Yazdanbakhsh, and Peter Clark. Self-refine: Iterative
+refinement with self-feedback, 2023. URL https://arxiv.org/abs/2303.17651.
+Dakota Mahan, Duy Van Phung, Rafael Rafailov, Chase Blagden, Nathan Lile, Louis Castricato, Jan-
+Philipp Fränken, Chelsea Finn, and Alon Albalak. Generative reward models. arXiv preprint
+arXiv:2410.12832, 2024.
+The mathlib Community. The lean mathematical library. In Proceedings of the 9th ACM SIGPLAN
+International Conference on Certified Programs and Proofs, POPL ’20. ACM, January 2020. doi:
+10.1145/3372885.3373824. URL http://dx.doi.org/10.1145/3372885.3373824.
+William Merrill and Ashish Sabharwal. The expresssive power of transformers with chain of thought.
+arXiv preprint arXiv:2310.07923, 2023.
+Iman Mirzadeh, Keivan Alizadeh, Hooman Shahrokhi, Oncel Tuzel, Samy Bengio, and Mehrdad
+Farajtabar. Gsm-symbolic: Understanding the limitations of mathematical reasoning in large
+language models, 2024. URL https://arxiv.org/abs/2410.05229.
+Arindam Mitra, Hamed Khanpour, Corby Rosset, and Ahmed Awadallah. Orca-math: Unlocking the
+potential of slms in grade school math, 2024. URL https://arxiv.org/abs/2402.14830.
+Reiichiro Nakano, Jacob Hilton, Suchir Balaji, Jeff Wu, Long Ouyang, Christina Kim, Christopher
+Hesse, Shantanu Jain, Vineet Kosaraju, William Saunders, Xu Jiang, Karl Cobbe, Tyna Eloundou,
+Gretchen Krueger, Kevin Button, Matthew Knight, Benjamin Chess, and John Schulman. Webgpt:
+Browser-assisted question-answering with human feedback, 2022.
+Allen Nie, Yi Su, Bo Chang, Jonathan N. Lee, Ed H. Chi, Quoc V. Le, and Minmin Chen. Evolve:
+Evaluating and optimizing llms for exploration, 2024. URL https://arxiv.org/abs/2410.
+06238.
+Michael Noukhovitch, Shengyi Huang, Sophie Xhonneux, Arian Hosseini, Rishabh Agarwal, and Aaron
+Courville. Asynchronous rlhf: Faster and more efficient off-policy rl for language models, 2024.
+URL https://arxiv.org/abs/2410.18252.
+Franz Nowak, Anej Svete, Alexandra Butoi, and Ryan Cotterell. On the representational capacity of
+neural language models with chain-of-thought reasoning. arXiv preprint arXiv:2406.14197, 2024.
+OpenAI. Gpt-4 technical report. arXiv preprint, 2023. https://arxiv.org/abs/2303.08774.
+OpenAI. Learning to reason with llms. https://openai.com/index/
+learning-to-reason-with-llms/, 2024. Accessed: 2024-12-20.
+Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong
+Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser
+Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul F Christiano, Jan
+Leike, and Ryan Lowe. Training language models to follow instructions with human feed-
+back. In S. Koyejo, S. Mohamed, A. Agarwal, D. Belgrave, K. Cho, and A. Oh (eds.), Ad-
+vances in Neural Information Processing Systems, volume 35, pp. 27730–27744. Curran Asso-
+ciates, Inc., 2022. URL https://proceedings.neurips.cc/paper_files/paper/2022/
+file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf.
+58
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Ryan Park, Rafael Rafailov, Stefano Ermon, and Chelsea Finn. Disentangling length from quality in
+direct preference optimization, 2024.
+Xue Bin Peng, Aviral Kumar, Grace Zhang, and Sergey Levine. Advantage-weighted regression: Simple
+and scalable off-policy reinforcement learning. arXiv preprint arXiv:1910.00177, 2019.
+Du Phan, Matthew D. Hoffman, David Dohan, Sholto Douglas, Tuan Anh Le, Aaron Parisi, Pavel
+Sountsov, Charles Sutton, Sharad Vikram, and Rif A. Saurous. Training chain-of-thought via
+latent-variable inference, 2023. URL https://arxiv.org/abs/2312.02179.
+Ben Prystawski, Michael Li, and Noah Goodman. Why think step by step? reasoning emerges from
+the locality of experience. Advances in Neural Information Processing Systems, 36, 2024.
+Pranav Putta, Edmund Mills, Naman Garg, Sumeet Motwani, Chelsea Finn, Divyansh Garg, and
+Rafael Rafailov. Agent q: Advanced reasoning and learning for autonomous ai agents. arXiv preprint
+arXiv:2408.07199, 2024.
+Yuxiao Qu, Tianjun Zhang, Naman Garg, and Aviral Kumar. Recursive introspection: Teaching
+language model agents how to self-improve, 2024. URL https://arxiv.org/abs/2407.18219.
+Santosh Kumar Radha, Yasamin Nouri Jelyani, Ara Ghukasyan, and Oktay Goktas. Iteration of
+thought: Leveraging inner dialogue for autonomous large language model reasoning, 2024. URL
+https://arxiv.org/abs/2409.12618.
+Kate Rakelly, Aurick Zhou, Deirdre Quillen, Chelsea Finn, and Sergey Levine. Efficient off-policy
+meta-reinforcement learning via probabilistic context variables, 2019. URL https://arxiv.org/
+abs/1903.08254.
+Machel Reid, Nikolay Savinov, Denis Teplyashin, Dmitry Lepikhin, Timothy Lillicrap, Jean-baptiste
+Alayrac, Radu Soricut, Angeliki Lazaridou, Orhan Firat, Julian Schrittwieser, et al. Gemini
+1.5: Unlocking multimodal understanding across millions of tokens of context. arXiv preprint
+arXiv:2403.05530, 2024.
+Christopher D. Rosin. Multi-armed bandits with episode context. Annals of Mathematics and Artificial
+Intelligence, 61(3):203–230, 2011. doi: 10.1007/s10472-011-9258-6.
+Adam Santoro, Sergey Bartunov, Matthew Botvinick, Daan Wierstra, and Timothy Lillicrap. One-shot
+learning with memory-augmented neural networks, 2016. URL https://arxiv.org/abs/1605.
+06065.
+John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy
+optimization algorithms, 2017.
+John Schultz, Jakub Adamek, Matej Jusup, Marc Lanctot, Michael Kaisers, Sarah Perrin, Daniel
+Hennes, Jeremy Shar, Cannada Lewis, Anian Ruoss, Tom Zahavy, Petar Veličković, Laurel Prince,
+Satinder Singh, Eric Malmi, and Nenad Tomašev. Mastering board games by external and internal
+planning with language models, 2024. URL https://arxiv.org/abs/2412.12119.
+Bilgehan Sel, Ahmad Al-Tawaha, Vanshaj Khattar, Ruoxi Jia, and Ming Jin. Algorithm of thoughts:
+Enhancing exploration of ideas in large language models, 2024. URL https://arxiv.org/abs/
+2308.10379.
+Amrith Setlur, Saurabh Garg, Xinyang Geng, Naman Garg, Virginia Smith, and Aviral Kumar. Rl
+on incorrect synthetic data scales the efficiency of llm math reasoning by eight-fold, 2024a. URL
+https://arxiv.org/abs/2406.14532.
+59
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Amrith Setlur, Chirag Nagpal, Adam Fisch, Xinyang Geng, Jacob Eisenstein, Rishabh Agarwal, Alekh
+Agarwal, Jonathan Berant, and Aviral Kumar. Rewarding progress: Scaling automated process
+verifiers for llm reasoning. arXiv preprint arXiv:2410.08146, 2024b.
+Amrith Setlur, Chirag Nagpal, Adam Fisch, Xinyang Geng, Jacob Eisenstein, Rishabh Agarwal, Alekh
+Agarwal, Jonathan Berant, and Aviral Kumar. Rewarding progress: Scaling automated process
+verifiers for llm reasoning, 2024c. URL https://arxiv.org/abs/2410.08146.
+Amrith Setlur, Yuxiao Qu, Lunjun Zhang, Matthew Yang, Virginia Smith,
+and Aviral Kumar. Optimizing llm test-time compute involves solv-
+ing a meta-rl problem. https://blog.ml.cmu.edu/2025/01/08/
+optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/,
+2025. CMU MLD Blog.
+Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan
+Zhang, Y. K. Li, Y. Wu, and Daya Guo. Deepseekmath: Pushing the limits of mathematical reasoning
+in open language models, 2024. URL https://arxiv.org/abs/2402.03300.
+Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, and Shunyu
+Yao. Reflexion: Language agents with verbal reinforcement learning, 2023. URL https://arxiv.
+org/abs/2303.11366.
+D. Silver, A. Huang, C. Maddison, et al. Mastering the game of go with deep neural networks and
+tree search. Nature, 529:484–489, 2016. doi: 10.1038/nature16961.
+David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez,
+Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy P. Lillicrap, Karen
+Simonyan, and Demis Hassabis. A general reinforcement learning algorithm that masters chess,
+shogi, and go through self-play. Science, 362(6419):1140–1144, 2018. doi: 10.1126/science.
+aar6404.
+Avi Singh, John D. Co-Reyes, Rishabh Agarwal, Ankesh Anand, Piyush Patil, Xavier Garcia, Peter J. Liu,
+James Harrison, Jaehoon Lee, Kelvin Xu, Aaron Parisi, Abhishek Kumar, Alex Alemi, Alex Rizkowsky,
+Azade Nova, Ben Adlam, Bernd Bohnet, Gamaleldin Elsayed, Hanie Sedghi, Igor Mordatch, Isabelle
+Simpson, Izzeddin Gur, Jasper Snoek, Jeffrey Pennington, Jiri Hron, Kathleen Kenealy, Kevin
+Swersky, Kshiteej Mahajan, Laura Culp, Lechao Xiao, Maxwell L. Bileschi, Noah Constant, Roman
+Novak, Rosanne Liu, Tris Warkentin, Yundi Qian, Yamini Bansal, Ethan Dyer, Behnam Neyshabur,
+Jascha Sohl-Dickstein, and Noah Fiedel. Beyond human data: Scaling self-training for problem-
+solving with language models, 2024. URL https://arxiv.org/abs/2312.06585.
+Prasann Singhal, Tanya Goyal, Jiacheng Xu, and Greg Durrett. A long way to go: Investigating length
+correlations in rlhf, 2023.
+Charlie Snell, Jaehoon Lee, Kelvin Xu, and Aviral Kumar. Scaling llm test-time compute optimally can
+be more effective than scaling model parameters, 2024. URL https://arxiv.org/abs/2408.
+03314.
+Ray J Solomonoff. A formal theory of inductive inference. part i. Information and control, 7(1):1–22,
+1964.
+Bradly C. Stadie, Ge Yang, Rein Houthooft, Xi Chen, Yan Duan, Yuhuai Wu, Pieter Abbeel, and Ilya
+Sutskever. Some considerations on learning to explore via meta-reinforcement learning, 2019. URL
+https://arxiv.org/abs/1803.01118.
+60
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Nisan Stiennon, Long Ouyang, Jeff Wu, Daniel M. Ziegler, Ryan Lowe, Chelsea Voss, Alec Radford,
+Dario Amodei, and Paul Christiano. Learning to summarize from human feedback, 2022.
+Fahim Tajwar, Anikait Singh, Archit Sharma, Rafael Rafailov, Jeff Schneider, Tengyang Xie, Stefano
+Ermon, Chelsea Finn, and Aviral Kumar. Preference fine-tuning of llms should leverage suboptimal,
+on-policy data. arXiv preprint arXiv:2404.14367, 2024.
+Qwen Team. Qwq: Reflect deeply on the boundaries of the unknown, November 2024. URL
+https://qwenlm.github.io/blog/qwq-32b-preview/.
+Ye Tian, Baolin Peng, Linfeng Song, Lifeng Jin, Dian Yu, Haitao Mi, and Dong Yu. Toward self-
+improvement of llms via imagination, searching, and criticizing, 2024. URL https://arxiv.
+org/abs/2404.12253.
+Shubham Toshniwal, Wei Du, Ivan Moshkov, Branislav Kisacanin, Alexan Ayrapetyan, and Igor Gitman.
+Openmathinstruct-2: Accelerating ai for math with massive open-source instruction data. arXiv
+preprint arXiv:2410.01560, 2024.
+Peiyi Wang, Lei Li, Zhihong Shao, Runxin Xu, Damai Dai, Yifei Li, Deli Chen, Yu Wu, and Zhifang Sui.
+Math-shepherd: Verify and reinforce llms step-by-step without human annotations. In Proceedings
+of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),
+pp. 9426–9439, 2024.
+Ronald J. Williams. Simple statistical gradient-following algorithms for connectionist reinforcement
+learning. Mach. Learn., 8(3–4):229–256, may 1992. ISSN 0885-6125. doi: 10.1007/BF00992696.
+URL https://doi.org/10.1007/BF00992696.
+Yuxi Xie, Anirudh Goyal, Wenyue Zheng, Min-Yen Kan, Timothy P. Lillicrap, Kenji Kawaguchi, and
+Michael Shieh. Monte carlo tree search boosts reasoning via iterative preference learning, 2024.
+URL https://arxiv.org/abs/2405.00451.
+Mengjiao Yang, Dale Schuurmans, Pieter Abbeel, and Ofir Nachum. Chain of thought imitation with
+procedure cloning, 2022. URL https://arxiv.org/abs/2205.10816.
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, and Karthik
+Narasimhan. Tree of thoughts: Deliberate problem solving with large language models, 2023. URL
+https://arxiv.org/abs/2305.10601.
+Tian Ye, Zicheng Xu, Yuanzhi Li, and Zeyuan Allen-Zhu. Physics of language models: Part 2.1,
+grade-school math and the hidden reasoning process, 2024a. URL https://arxiv.org/abs/
+2407.20311.
+Tian Ye, Zicheng Xu, Yuanzhi Li, and Zeyuan Allen-Zhu. Physics of language models: Part 2.2, how
+to learn from mistakes on grade-school math problems, 2024b. URL https://arxiv.org/abs/
+2408.16293.
+Shuo Yin, Weihao You, Zhilong Ji, Guoqiang Zhong, and Jinfeng Bai. Mumath-code: Combining tool-
+use large language models with multi-perspective data augmentation for mathematical reasoning.
+arXiv preprint arXiv:2405.07551, 2024.
+Xiao Yu, Baolin Peng, Vineeth Vajipey, Hao Cheng, Michel Galley, Jianfeng Gao, and Zhou Yu.
+Exact: Teaching ai agents to explore with reflective-mcts and exploratory learning, 2024. URL
+https://arxiv.org/abs/2410.02052.
+61
+Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+Zheng Yuan, Hongyi Yuan, Chengpeng Li, Guanting Dong, Keming Lu, Chuanqi Tan, Chang Zhou,
+and Jingren Zhou. Scaling relationship on learning mathematical reasoning with large language
+models, 2023. URL https://arxiv.org/abs/2308.01825.
+Albert S. Yue, Lovish Madaan, Ted Moskovitz, DJ Strouse, and Aaditya K. Singh. HARP: A chal-
+lenging human-annotated math reasoning benchmark, 2024. URL https://github.com/
+aadityasingh/HARP.
+Eric Zelikman, Yuhuai Wu, Jesse Mu, and Noah Goodman. Star: Bootstrapping reasoning with
+reasoning. Advances in Neural Information Processing Systems, 35:15476–15488, 2022.
+Eric Zelikman, Georges Harik, Yijia Shao, Varuna Jayasiri, Nick Haber, and Noah D Goodman.
+Quiet-star: Language models can teach themselves to think before speaking. arXiv preprint
+arXiv:2403.09629, 2024.
+Lunjun Zhang, Arian Hosseini, Hritik Bansal, Mehran Kazemi, Aviral Kumar, and Rishabh Agarwal.
+Generative verifiers: Reward modeling as next-token prediction, 2024a. URL https://arxiv.
+org/abs/2408.15240.
+Yiming Zhang, Jianfeng Chi, Hailey Nguyen, Kartikeya Upasani, Daniel M. Bikel, Jason Weston, and
+Eric Michael Smith. Backtracking improves generation safety, 2024b. URL https://arxiv.org/
+abs/2409.14586.
+Andy Zhou, Kai Yan, Michal Shlapentokh-Rothman, Haohan Wang, and Yu-Xiong Wang. Language
+agent tree search unifies reasoning acting and planning in language models, 2024a. URL https:
+//arxiv.org/abs/2310.04406.
+Yifei Zhou, Andrea Zanette, Jiayi Pan, Sergey Levine, and Aviral Kumar. Archer: Training language
+model agents via hierarchical multi-turn rl, 2024b. URL https://arxiv.org/abs/2402.19446.
+A. Prompting
+We investigate whether carefully constructed prompting protocols can induce reasoning capabilities
+similar to those demonstrated by RL-based models like O1. Through an evaluation of five increasingly
+sophisticated instruction sets, we analyze token generation patterns, presence of reasoning-like
+behaviors, and their correlation with math problem-solving performance.
+Table 4: Input token count across prompting strategies using OpenAI’s GPT-4o tokenizer (excluding
+problem tokens). Complex instructions like Think (3-shot) use substantially more tokens, primarily
+due to in-context demonstrations and explicit capabilities descriptions (e.g. thinking, reflection, and
+verification requirements).
+Strategy Tokens
+Baseline 23
+Chain-of-Thought (CoT) 35
+Think 1,895
+Think with demonstrations (3-shot) 4,659
+Think & Verify 2,111
