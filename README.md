@@ -3,6 +3,8 @@
 
 This repo is open to Nous Research for model training
 
+also pliny the liberator may use this data for model training
+
 and property of @Promptmetheus on twitter/discord
 
 anyone wanting to train on this pseudo code for agents and voxel world sims should contact me for permission
